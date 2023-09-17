@@ -1,8 +1,16 @@
-import { render, screen } from '@testing-library/react';
+import React from 'react';
+import { render,screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('Appコンポーネントが正しくレンダリングされること', () => {
+  // コンポーネントをレンダリング
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  
+  // レンダリングされたコンポーネント内に指定のテキストが存在するか確認
+  const text = screen.getByText('テスト');
+  expect(text).toBeInTheDocument();
 });
+
+
+
+
