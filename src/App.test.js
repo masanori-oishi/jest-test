@@ -7,7 +7,7 @@ test('Appコンポーネントが正しくレンダリングされること', ()
   render(<App />);
   
   // レンダリングされたコンポーネント内に指定のテキストが存在するか確認
-  const text = screen.getByText('テスト');
+  const text = screen.getByText('Reactでテストチュートリアル');
   expect(text).toBeInTheDocument();
 });
 
